@@ -166,6 +166,14 @@ void DieuKhien_DiChuyen(Snake &snake)
             snake.tt=UP;
         else if(key=='S'||key=='s')
             snake.tt=DOWN;
+        else if(key=='4')
+            snake.tt=LEFT;
+        else if(key=='6')
+            snake.tt=RIGHT;
+        else if(key=='8')
+            snake.tt=UP;
+        else if(key=='5')
+            snake.tt=DOWN;
     }
     if(snake.tt==UP)
         snake.dot[0].y--;
