@@ -84,8 +84,8 @@ void TextColor (int color)
 }
 
 #endif
-#define consoleWidth 60
-#define consoleHeight 32
+#define consoleWidth 40
+#define consoleHeight 20
 enum TrangThai { UP,DOWN,LEFT,RIGHT };
 
 struct ToaDo
@@ -125,11 +125,18 @@ void HienThi(Snake snake, HoaQua hq)
 {
     clrscr();
     TextColor (8+rand()%8);
-    for(int i=0;i<consoleHeight;i++)
+    for(int i=0;i<consoleHeight+1;i++)
     {
         gotoXY(consoleWidth,i);
         cout << "|";
     }
+    for(int i=0;i<consoleWidth;i++)
+    {
+        gotoXY(i,consoleHeight);
+        cout << "_";
+    }
+    gotoXY(consoleWidth,consoleHeight);
+    cout << "]";
     TextColor (8+rand()%8);
     gotoXY(hq.td.x,hq.td.y);
     cout << "+";
@@ -144,7 +151,7 @@ void HienThi(Snake snake, HoaQua hq)
     TextColor(10);
 	//hien thi trang thai game
 	gotoXY(consoleWidth+2,1);
-	cout << "Diem = " << snake.diem;
+	cout << "Diem = " << snake.diem*10;
 }
 
 void DieuKhien_DiChuyen(Snake &snake)
@@ -189,7 +196,7 @@ void DieuKhien_DiChuyen(Snake &snake)
 int XuLy(Snake &snake, HoaQua &hq,int &ThoiGianSleep)
 {
     if(snake.dot[0].x<0||snake.dot[0].x>=consoleWidth||
-       snake.dot[0].y<0||snake.dot[0].y>=consoleHeight-1)
+       snake.dot[0].y<0||snake.dot[0].y>=consoleHeight+1)
         return -1;
     for(int i=1;i<snake.n;i++)
         if(snake.dot[0].x==snake.dot[i].x&&
