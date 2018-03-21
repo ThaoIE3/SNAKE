@@ -13,7 +13,7 @@ using namespace std;
 #define ColorCode_DarkCyan		3
 #define ColorCode_DarkRed		4
 #define ColorCode_DarkPink		5
-#define ColorCode_DarkYellow	6
+#define ColorCode_DarkYellow		6
 #define ColorCode_DarkWhite		7
 #define ColorCode_Grey			8
 #define ColorCode_Blue			9
