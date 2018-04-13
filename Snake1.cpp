@@ -2,61 +2,8 @@
 #include<Windows.h>
 #include<conio.h>
 #include<time.h>
+#include"console.h"
 using namespace std;
-#ifndef _console_header
-#define _console_header
-#define ColorCode_Back			0
-#define ColorCode_DarkBlue		1
-#define ColorCode_DarkGreen		2
-#define ColorCode_DarkCyan		3
-#define ColorCode_DarkRed		4
-#define ColorCode_DarkPink		5
-#define ColorCode_DarkYellow	6
-#define ColorCode_DarkWhite		7
-#define ColorCode_Grey			8
-#define ColorCode_Blue			9
-#define ColorCode_Green			10
-#define ColorCode_Cyan			11
-#define ColorCode_Red			12
-#define ColorCode_Pink			13
-#define ColorCode_Yellow		14
-#define ColorCode_White			15
-#define default_ColorCode		7
-#define key_Up		1072
-#define key_Down	1080
-#define key_Left	1075
-#define key_Right	1077
-#define key_none	-1
-#include <windows.h>
-int inputKey();
-void clrscr();
-void gotoXY (int column, int line);
-void TextColor (int color);
-void clrscr()
-{
-	CONSOLE_SCREEN_BUFFER_INFO	csbiInfo;
-	HANDLE	hConsoleOut;
-	COORD	Home = {0,0};
-	DWORD	dummy;
-	hConsoleOut = GetStdHandle(STD_OUTPUT_HANDLE);
-	GetConsoleScreenBufferInfo(hConsoleOut,&csbiInfo);
-	FillConsoleOutputCharacter(hConsoleOut,' ',csbiInfo.dwSize.X * csbiInfo.dwSize.Y,Home,&dummy);
-	csbiInfo.dwCursorPosition.X = 0;
-	csbiInfo.dwCursorPosition.Y = 0;
-	SetConsoleCursorPosition(hConsoleOut,csbiInfo.dwCursorPosition);
-}
-void gotoXY (int column, int line)
-{
-	COORD coord;
-	coord.X = column;
-	coord.Y = line;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);
-}
-void TextColor (int color)
-{
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE) , color);
-}
-#endif
 #define consoleWidth 40
 #define consoleHeight 20
 enum TrangThai { UP,DOWN,LEFT,RIGHT };
@@ -118,6 +65,7 @@ void Khoitao(Snake &snake, HoaQua &hq)
 
 void HienThi(Snake snake, HoaQua hq)
 {
+    //TextColor (8+rand()%8);
     for(int i=0;i<consoleHeight+1;i++)
         vemoto(i,consoleWidth,186,14);
     for(int i=0;i<consoleWidth+1;i++)
@@ -237,4 +185,3 @@ int main()
     }
     return 0;
 }
-
