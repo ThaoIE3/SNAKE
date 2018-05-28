@@ -1,7 +1,11 @@
 # SNAKE
 Bài Tập Lớn
+
+
 Họ và tên: Trịnh Thị Thảo
+
 Thời gian hoàn thành: 2 tuần 
+
 
 Luật chơi:
 - 4 quả cherry được đặt kề nhau thành 1 quả cherry lớn.
