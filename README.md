@@ -17,4 +17,5 @@ Luật chơi:
  Hướng phát triển trò chơi trong tương lai:
  - cho 2 người chơi.
  - người chơi với máy.
+ - sẽ có thêm đồ họa, hình ảnh, âm thanh sống động.
  
