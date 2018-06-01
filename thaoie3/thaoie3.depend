@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1527819846 source:c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\choiran.cpp
+	"choiran.h"
+
+1527819846 c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\choiran.h
+	"console.h"
+	"struct.h"
+	"Khoitao.h"
+	"DieuKhien_Dichuyen.h"
+	"XuLy.h"
+	"HienThi.h"
+	<conio.h>
+
+1527819846 c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\console.h
+	<windows.h>
+
+1527819846 c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\struct.h
+
+1527819846 c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\khoitao.h
+	"console.h"
+	"struct.h"
+
+1527819846 c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\dieukhien_dichuyen.h
+	"struct.h"
+	"console.h"
+
+1527819846 c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\xuly.h
+	"struct.h"
+	"console.h"
+
+1527819846 c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\hienthi.h
+	"struct.h"
+	<iostream>
+
+1527819846 source:c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\console.cpp
+	"console.h"
+
+1527819846 source:c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\dieukhien_dichuyen.cpp
+	"DieuKhien_DiChuyen.h"
+
+1527819846 source:c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\hienthi.cpp
+	"HienThi.h"
+	"console.h"
+	"struct.h"
+
+1527819846 source:c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\khoitao.cpp
+	"Khoitao.h"
+
+1527819846 source:c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\main.cpp
+	<time.h>
+	"choiran.h"
+
+1527819846 source:c:\users\pc\codeblocks\mingw\mingw32\bin\thaoie3\xuly.cpp
+	"XuLy.h"
+
