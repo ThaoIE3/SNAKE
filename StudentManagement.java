@@ -1,6 +1,6 @@
 public class StudentManagement
 {
-    public Student[] std=new Student[5];
+    public Student[] std=new Student[100];
     public void removeStudent(String id)
     {
         int count=0;
@@ -21,25 +21,24 @@ public class StudentManagement
 
     public void studentByGroup()
     {
-        int n=std.length;
-        int[] list= new int[n];
+        int[] check= new int[std.length];
         int i;
-        for(i=0;i<n;i++)
+        for(i=0;i<std.length;i++)
         {
-            list[i]=0;
+            check[i]=0;
         }
-        for(i=0;i<n;i++)
+        for(i=0;i<std.length;i++)
         {
-            if(list[i]==0)
+            if(check[i]==0)
             {
                 System.out.println("Thông tin Sinh Viên theo nhóm lớp: " +
-                                    std[i].getGroup());
-                for(int j=i;j<n;j++)
+                        std[i].getGroup());
+                for(int j=i;j<std.length;j++)
                 {
                     if(std[i].getGroup().equals(std[j].getGroup()))
                     {
                         System.out.println(std[j].getInfo());
-                        list[j]=1;
+                        check[j]=1;
                     }
                 }
             }
@@ -73,9 +72,10 @@ public class StudentManagement
         {
             sm.std[i]=new Student();
         }
-        System.out.println("Nhập thông tin của 5 bạn Sinh Viên: ");
+        System.out.println("Danh sách Sinh Viên: ");
         for(i=0;i<sm.std.length;i++)
         {
+            System.out.println("Sinh Viên thứ "+ (i+1));
             Student st = sm.std[i];
             st.Nhapdulieu();
         }
